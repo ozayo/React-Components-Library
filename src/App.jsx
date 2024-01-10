@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import AlertPage from "./pages/AlertPage";
 import BadgePage from "./pages/BadgePage";
 import CardPage from "./pages/CardPage";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/badges" element={<BadgePage />} />
           <Route path="/cards" element={<CardPage />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
