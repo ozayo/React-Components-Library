@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fbfbfe;
+    --primary: #2f27ce;
+    --secondary: #dedcff;
+    --accent: #cd52e0;
+  }
+  body {
+    @apply font-sans font-normal leading-relaxed;
+  }
+  h1 {
+    @apply text-4xl font-extrabold my-3 text-black;
+  }
+  h2 {
+    @apply text-3xl font-bold my-2 text-black;
+  }
+  h3 {
+    @apply text-2xl font-bold my-2 text-black;
+  }
+  h3 {
+    @apply text-xl font-bold my-2 text-black;
+  }
+  pre code {
+    @apply text-xs;
+  }
+  pre {
+    @apply rounded mt-2 mb-4;
+  }
+}
+@layer components {
+  button:disabled {
+    @apply bg-slate-200 hover:bg-slate-200 opacity-40;
+  }
+  button.primary {
+    @apply bg-blue-700 text-white hover:bg-blue-600;
+  }
+  button.secondary {
+    @apply bg-violet-100 text-black hover:bg-violet-200;
+  }
+  button.accent {
+    @apply bg-fuchsia-700 text-white hover:bg-fuchsia-600;
+  }
+  button.small {
+    @apply px-4 py-1;
+  }
+  button.base {
+    @apply px-7 py-2;
+  }
+  button.large {
+    @apply px-10 py-3;
+  }
+  button.rsm {
+    @apply rounded;
+  }
+  button.rm {
+    @apply rounded-xl;
+  }
+  button.rf {
+    @apply rounded-full;
+  }
+}
