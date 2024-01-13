@@ -1,44 +1,91 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
+import logo from "../assets/oo-logo.svg";
 
 function Header() {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
+  };
+
   return (
-    <header className="md:mx-auto py-3 md:py-6 mx-auto">
-      <div className="header flex items-center">
-        <div className="w-3/12 md:w-2/12">
-          <a className="imglink" href="/" aria-label="Home Page">
-            <img
-              className="logo"
-              src="https://wordpress-339479-3715247.cloudwaysapps.com/wp-content/uploads/oo-logo.svg"
-              width="60px"
-              alt="Ozay Logo"
-            />
-          </a>
+    <header className="py-4 md:py-8 px-4 md:px-0">
+      <div className="flex">
+        <div className="w-1/4 md:w-1/6">
+          <Link to="/">
+            <img className="logo" src={logo} width="60px" alt="Ozay Logo" />
+          </Link>
         </div>
-        <nav className="w-9/12 md:w-10/12 px-0 md:px-8 flex justify-end">
-          <ul className="hidden gap-3 md:flex">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/buttons">Buttons</Link>
-            </li>
-            <li>
-              <Link to="/alerts">Alerts</Link>
-            </li>
-            <li>
-              <Link to="/badges">Badges</Link>
-            </li>
-            <li>
-              <Link to="/cards">Cards</Link>
-            </li>
-            <li>
-              <a href="https://github.com/ozayo">
-                <FaGithub size="1.5em" />
-              </a>
-            </li>
-          </ul>
-        </nav>
+
+        <div className="w-3/4 md:w-5/6 lg:flex lg:flex-row justify-end md:flex md:flex-col">
+          {/* Mobil navigasyon butonu */}
+          <div
+            className="md:hidden cursor-pointer text-gray-800 hover:text-blue-500 flex justify-end "
+            onClick={toggleMobileNav}
+          >
+            {isMobileNavOpen ? (
+              <FaTimes size="1.5em" />
+            ) : (
+              <FaBars size="1.5em" />
+            )}
+          </div>
+
+          {/* Normal menü */}
+          <nav
+            className={`${
+              isMobileNavOpen
+                ? "flex flex-col items-end mt-4"
+                : "hidden md:flex"
+            } md:flex md:items-center justify-end`}
+          >
+            <ul className="md:flex gap-4">
+              <li>
+                <Link to="/" className="text-gray-800 hover:text-blue-500">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/buttons"
+                  className="text-gray-800 hover:text-blue-500"
+                >
+                  Buttons
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/alerts"
+                  className="text-gray-800 hover:text-blue-500"
+                >
+                  Alerts
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/badges"
+                  className="text-gray-800 hover:text-blue-500"
+                >
+                  Badges
+                </Link>
+              </li>
+              <li>
+                <Link to="/cards" className="text-gray-800 hover:text-blue-500">
+                  Cards
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/ozayo"
+                  className="text-gray-800 hover:text-blue-500 flex items-center"
+                >
+                  <FaGithub size="1.5em" className="mr-1" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );
