@@ -41,31 +41,31 @@
   button:disabled {
     @apply bg-slate-200 hover:bg-slate-200 opacity-40;
   }
-  button.primary {
-    @apply bg-blue-700 text-white hover:bg-blue-600;
+  .button.primary {
+    @apply bg-blue-700 text-white hover:bg-blue-600 inline-block;
   }
-  button.secondary {
-    @apply bg-violet-100 text-black hover:bg-violet-200;
+  .button.secondary {
+    @apply bg-violet-100 text-black hover:bg-violet-200 inline-block;
   }
-  button.accent {
-    @apply bg-fuchsia-700 text-white hover:bg-fuchsia-600;
+  .button.accent {
+    @apply bg-fuchsia-700 text-white hover:bg-fuchsia-600 inline-block;
   }
-  button.small {
+  .button.small {
     @apply px-4 py-1;
   }
-  button.base {
+  .button.base {
     @apply px-7 py-2;
   }
-  button.large {
+  .button.large {
     @apply px-10 py-3;
   }
-  button.rsm {
+  .button.rsm {
     @apply rounded;
   }
-  button.rm {
+  .button.rm {
     @apply rounded-xl;
   }
-  button.rf {
+  .button.rf {
     @apply rounded-full;
   }
   /* Badges Style */
