@@ -42,14 +42,17 @@ function Header() {
           >
             <ul className="md:flex gap-4">
               <li>
-                <Link to="/" className="text-gray-800 hover:text-blue-500">
+                <Link
+                  to="/"
+                  className="text-gray-800 hover:text-blue-500 font-bold"
+                >
                   Home
                 </Link>
               </li>
               <li>
                 <Link
                   to="/buttons"
-                  className="text-gray-800 hover:text-blue-500"
+                  className="text-gray-800 hover:text-blue-500 font-bold"
                 >
                   Buttons
                 </Link>
@@ -57,7 +60,7 @@ function Header() {
               <li>
                 <Link
                   to="/alerts"
-                  className="text-gray-800 hover:text-blue-500"
+                  className="text-gray-800 hover:text-blue-500 font-bold"
                 >
                   Alerts
                 </Link>
@@ -65,13 +68,16 @@ function Header() {
               <li>
                 <Link
                   to="/badges"
-                  className="text-gray-800 hover:text-blue-500"
+                  className="text-gray-800 hover:text-blue-500 font-bold"
                 >
                   Badges
                 </Link>
               </li>
               <li>
-                <Link to="/cards" className="text-gray-800 hover:text-blue-500">
+                <Link
+                  to="/cards"
+                  className="text-gray-800 hover:text-blue-500 font-bold"
+                >
                   Cards
                 </Link>
               </li>
