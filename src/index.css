@@ -68,6 +68,9 @@
   .button.rf {
     @apply rounded-full;
   }
+  .button svg {
+    @apply inline-block items-center mr-1;
+  }
   /* Badges Style */
   .badge {
     @apply flex items-center gap-1 p-1 text-xs rounded px-2 py-0.5 h-fit w-fit font-medium;
@@ -138,7 +141,7 @@
     @apply bg-white text-gray-700 shadow-md hover:shadow-lg;
   }
   .card.secondary {
-    @apply bg-violet-100 text-black hover:bg-violet-200;
+    @apply bg-violet-50 text-black shadow-md hover:bg-violet-100;
   }
   .card.accent {
     @apply bg-fuchsia-700 text-white hover:bg-fuchsia-600;
