@@ -83,7 +83,8 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="https://github.com/ozayo"
+                  href="https://github.com/ozayo/React-Components-Library"
+                  target="_blank"
                   className="text-gray-800 hover:text-blue-500 flex items-center"
                 >
                   <FaGithub size="1.5em" className="mr-1" />
